@@ -3,6 +3,7 @@ My NeoVim configuration
 
 ## Handy keymaps that you should remember
 NOTE: <leader> is the Space character
+
 NOTE 2: Look [here](https://github.com/joegar000/nvim-config/blob/main/lua/myconfig/remap.lua) for custom remaps
 
 ### Nvim Tree
