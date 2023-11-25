@@ -1,5 +1,5 @@
 # nvim-config
-My NeoVim configuration
+My NeoVim configuration. Based heavily on [the Primeagen's](https://github.com/ThePrimeagen/init.lua/tree/master)
 
 ## Handy keymaps that you should remember
 NOTE: <leader> is the Space character
@@ -63,7 +63,7 @@ NOTE 2: Look [here](https://github.com/joegar000/nvim-config/blob/main/lua/mycon
 
 `<leader>gf` -- find git files
 
-`<leader>ps` -- grep files
+`<leader>ps` -- grep files (requires [ripgrep](https://github.com/BurntSushi/ripgrep))
 
 `normal<C-c>` -- close search
 
