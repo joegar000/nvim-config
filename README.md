@@ -63,7 +63,7 @@ NOTE 2: Look [here](https://github.com/joegar000/nvim-config/blob/main/lua/mycon
 
 `<C-y>` -- select selected suggestion item
 
-`<C-Space>` -- cmp.mapping.complete() (i.e. I'm not sure what this one does
+`<C-Space>` -- cmp.mapping.complete() (i.e. I'm not sure what this one does)
 
 `:Mason` -- popup for installed and available LSPs
 
