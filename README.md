@@ -25,6 +25,7 @@ NOTE 2: Look [here](https://github.com/joegar000/nvim-config/blob/main/lua/mycon
 `ysaw(char)` -- surround around char
 
 `ds(char)` -- delete char
+`cs(char)(newChar)` -- change surrounding char to newChar
 
 
 ### Fugitive
