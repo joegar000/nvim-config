@@ -1,8 +1,8 @@
 # nvim-config
-My NeoVim configuration. Based heavily on [the Primeagen's](https://github.com/ThePrimeagen/init.lua/tree/master)
+My NeoVim configuration. Based heavily on [The Primeagen's](https://github.com/ThePrimeagen/init.lua/tree/master).
 
 ## Handy keymaps that you should remember
-NOTE: <leader> is the Space character
+NOTE: `<leader>` is the Space character
 
 NOTE 2: Look [here](https://github.com/joegar000/nvim-config/blob/main/lua/myconfig/remap.lua) for custom remaps
 
