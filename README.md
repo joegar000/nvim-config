@@ -6,6 +6,12 @@ NOTE: <leader> is the Space character
 
 NOTE 2: Look [here](https://github.com/joegar000/nvim-config/blob/main/lua/myconfig/remap.lua) for custom remaps
 
+### General
+`<C-w-s>` -- window down
+`<C-w-v>` -- window right
+`<C-w-n>` -- window empty
+`<C-[hjkl]>` -- window nav
+
 ### Nvim Tree
 `<leader>pv` -- toggle nvim-tree
 
