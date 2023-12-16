@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/Users/davidgarcia/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
     url = "https://github.com/maxmellon/vim-jsx-pretty"
   },
+  ["vim-sleuth"] = {
+    loaded = true,
+    path = "/Users/davidgarcia/.local/share/nvim/site/pack/packer/start/vim-sleuth",
+    url = "https://github.com/tpope/vim-sleuth"
+  },
   ["vscode.nvim"] = {
     loaded = true,
     path = "/Users/davidgarcia/.local/share/nvim/site/pack/packer/start/vscode.nvim",

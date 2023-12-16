@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   -- Plugins go here
-  
+
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
@@ -68,6 +68,8 @@ return require('packer').startup(function(use)
   use('mattn/emmet-vim')
 
   use('preservim/nerdcommenter')
+
+  use('tpope/vim-sleuth')
 
   -- Plugins end here
 end)
