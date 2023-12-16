@@ -1,4 +1,5 @@
 vim.keymap.set("n", "<leader>pv", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>>", ":GuessIndent<CR>")
 
 -- Allows J and K to shift lines around when in visual or visual line mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -17,6 +18,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- Preserves paste when pasting over selected text
 vim.keymap.set("x", "<leader>p", "\"_dP")
+
+-- Paste from system clipboard
+vim.keymap.set("n", "<leader>p", "\"+p")
+vim.keymap.set("n", "<leader>P", "\"+P")
 
 -- Allows <leader>y and <leader>Y to copy into system clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
@@ -41,4 +46,3 @@ vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
-

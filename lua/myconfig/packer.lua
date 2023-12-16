@@ -69,10 +69,7 @@ return require('packer').startup(function(use)
 
   use('preservim/nerdcommenter')
 
-  use {
-    'nmac427/guess-indent.nvim',
-    config = function() require('guess-indent').setup {} end,
-  }
+  use ('nmac427/guess-indent.nvim')
 
   -- Plugins end here
 end)

@@ -67,6 +67,8 @@ NOTE 2: Look [here](https://github.com/joegar000/nvim-config/blob/main/lua/mycon
 
 `<C-Space>` -- cmp.mapping.complete() (i.e. I'm not sure what this one does)
 
+`<C-<leader>>` -- Suggestions (if in insert mode)
+
 `:Mason` -- popup for installed and available LSPs
 
 
@@ -87,3 +89,5 @@ NOTE 2: Look [here](https://github.com/joegar000/nvim-config/blob/main/lua/mycon
 ### Undo Tree
 `<leader>u` -- Toggle undo tree
 
+### Guess-indent
+`<leader>>` -- Run the `:GuessIndent` command to recalculate the indentation for the file
