@@ -69,6 +69,17 @@ return require('packer').startup(function(use)
 
   use ('nmac427/guess-indent.nvim')
 
+  use {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        -- config
+      }
+    end,
+    requires = {'nvim-tree/nvim-web-devicons'}
+  }
+
   -- Plugins end here
 end)
 
