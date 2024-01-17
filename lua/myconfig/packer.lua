@@ -80,6 +80,13 @@ return require('packer').startup(function(use)
     requires = {'nvim-tree/nvim-web-devicons'}
   }
 
+
+  use 'mfussenegger/nvim-dap'
+
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+  use 'folke/neodev.nvim'
+
   -- Plugins end here
 end)
 
