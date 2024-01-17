@@ -54,8 +54,6 @@ return require('packer').startup(function(use)
 
   use('kylechui/nvim-surround')
 
-  use('karb94/neoscroll.nvim')
-
   use('jiangmiao/auto-pairs')
 
   use('nvim-tree/nvim-tree.lua')
