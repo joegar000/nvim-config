@@ -87,6 +87,8 @@ return require('packer').startup(function(use)
 
   use 'folke/neodev.nvim'
 
+  use 'David-Kunz/jester'
+
   -- Plugins end here
 end)
 
