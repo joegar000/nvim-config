@@ -1,13 +1,6 @@
 local setup, nvimtree = pcall(require, "nvim-tree")
 if not setup then return end
 
-vim.cmd([[
-  nnoremap - :NvimTreeToggle<CR>
-]])
-
--- local keymap = vim.keymap -- for conciseness
--- keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
-
 -- vim.opt.foldmethod = "expr"
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- vim.opt.foldenable = false --                  " Disable folding at startup.
