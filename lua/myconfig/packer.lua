@@ -91,6 +91,13 @@ return require('packer').startup(function(use)
 
   use 'karb94/neoscroll.nvim'
 
+  use 'xiyaowong/transparent.nvim'
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
   -- Plugins end here
 end)
 
