@@ -89,6 +89,8 @@ return require('packer').startup(function(use)
 
   use 'David-Kunz/jester'
 
+  use 'karb94/neoscroll.nvim'
+
   -- Plugins end here
 end)
 
