@@ -63,8 +63,6 @@ return require('packer').startup(function(use)
   use('HerringtonDarkholme/yats.vim')
   use('maxmellon/vim-jsx-pretty')
 
-  use('mattn/emmet-vim')
-
   use('preservim/nerdcommenter')
 
   use ('nmac427/guess-indent.nvim')
