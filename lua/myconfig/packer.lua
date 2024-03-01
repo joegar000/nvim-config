@@ -79,9 +79,13 @@ return require('packer').startup(function(use)
   }
 
 
-  use 'mfussenegger/nvim-dap'
-
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use {
+    'mfussenegger/nvim-dap',
+    requires = {
+      { 'rcarriga/nvim-dap-ui' },
+      { 'mxsdev/nvim-dap-vscode-js' }
+    }
+  }
 
   use 'folke/neodev.nvim'
 
