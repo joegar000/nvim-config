@@ -33,3 +33,7 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
 vim.opt.colorcolumn = "120"
+
+if vim.g.neovide then
+  vim.g.neovide_scale_factor = 0.85
+end
