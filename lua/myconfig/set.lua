@@ -34,6 +34,8 @@ vim.g.mapleader = " "
 
 vim.opt.colorcolumn = "120"
 
-if vim.g.neovide then
+local isWindows = package.config:sub(1,1) == '\\'
+
+if vim.g.neovide and isWindows then
   vim.g.neovide_scale_factor = 0.85
 end
