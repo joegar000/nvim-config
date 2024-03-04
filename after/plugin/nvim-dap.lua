@@ -11,7 +11,6 @@ end)
 
 require("dap-vscode-js").setup({
   node_path = "node",
-  debugger_path = vim.fn.stdpath('data') .. '/mason/packages/js-debug-adapter',
   adapters = {
     'chrome',
     'pwa-node',
@@ -69,13 +68,7 @@ for _, language in ipairs(js_based_languages) do
       protocol = "inspector",
       sourceMaps = true,
       userDataDir = false,
-    },
-    -- Divider for the launch.json derived configs
-    {
-      name = "----- ↓ launch.json configs ↓ -----",
-      type = "",
-      request = "launch",
-    },
+    }
   }
 end
 
