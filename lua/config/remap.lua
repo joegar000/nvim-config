@@ -1,6 +1,3 @@
-vim.keymap.set("n", "<leader>pv", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>>", ":GuessIndent<CR>")
-
 -- Allows J and K to shift lines around when in visual or visual line mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
