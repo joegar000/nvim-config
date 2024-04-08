@@ -29,6 +29,6 @@ vim.g.mapleader = " "
 
 vim.opt.colorcolumn = "120"
 
-if isNeovide and isWindows then
+if InNeovide and IsWindows then
   vim.g.neovide_scale_factor = 0.85
 end

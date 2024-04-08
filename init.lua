@@ -11,8 +11,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-isWindows = package.config:sub(1,1) == '\\'
-inNeovide = vim.g.neovide
+IsWindows = package.config:sub(1,1) == '\\'
+InNeovide = vim.g.neovide
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
