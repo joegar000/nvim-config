@@ -4,6 +4,6 @@ return {
         require('neoscroll').setup()
     end,
     enabled = function()
-        return not isNeovide
+        return not InNeovide
     end
 }

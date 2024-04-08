@@ -19,6 +19,6 @@ vim.g.maplocalleader = "\\"
 
 vim.keymap.set('n', '<leader>l', ':Lazy<CR>')
 
-require("lazy").setup("plugins")
 require("config")
+require("lazy").setup("plugins")
 
