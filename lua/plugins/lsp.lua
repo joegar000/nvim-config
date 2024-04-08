@@ -2,6 +2,7 @@
 return {
   {
     "folke/neodev.nvim",
+    lazy = false,
     opts = {}
   },
   {
@@ -73,16 +74,30 @@ return {
   },
   {
     'williamboman/mason.nvim',
+    lazy = false,
     keys = {
       { '<leader>m', '<cmd>Mason<CR>', desc = 'Open Mason' }
     }
   },
-  {'williamboman/mason-lspconfig.nvim'},
-  {'neovim/nvim-lspconfig'},
-  {'hrsh7th/cmp-nvim-lsp'},
+  {
+    'williamboman/mason-lspconfig.nvim',
+    lazy = false
+  },
+  {
+    'neovim/nvim-lspconfig',
+    lazy = false
+  },
+  {
+    'hrsh7th/cmp-nvim-lsp',
+    lazy = false
+  },
   {
     'hrsh7th/nvim-cmp',
+    lazy = false
   },
-  {'L3MON4D3/LuaSnip'},
+  {
+    'L3MON4D3/LuaSnip',
+    lazy = false
+  },
 }
 
