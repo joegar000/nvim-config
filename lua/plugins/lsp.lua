@@ -3,6 +3,10 @@ return {
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
+    config = function()
+      local lsp_zero = require('lsp-zero')
+      lsp_zero.extend_lspconfig()
+    end,
     init = function()
       local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
       vim.opt.rtp:prepend(lazypath)
