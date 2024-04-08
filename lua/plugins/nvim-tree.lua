@@ -77,7 +77,15 @@ return {
                 width = function()
                     return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
                 end,
-            }
+            },
+            git = {
+                enable = true,
+                show_on_dirs = true,
+                show_on_open_dirs = true,
+                disable_for_dirs = {},
+                timeout = 2000,
+                cygwin_support = false,
+            },
         })
     end
 }
