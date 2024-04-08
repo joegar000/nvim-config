@@ -71,7 +71,12 @@ return {
       })
     end
   },
-  {'williamboman/mason.nvim'},
+  {
+    'williamboman/mason.nvim',
+    keys = {
+      { '<leader>m', '<cmd>Mason<CR>', desc = 'Open Mason' }
+    }
+  },
   {'williamboman/mason-lspconfig.nvim'},
   {'neovim/nvim-lspconfig'},
   {'hrsh7th/cmp-nvim-lsp'},
