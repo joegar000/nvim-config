@@ -96,7 +96,7 @@ return {
     lazy = false,
     config = function()
       local cmp = require('cmp')
-      return {
+      cmp.setup({
         sources = {
           {name = 'path'},
           {name = 'nvim_lsp'},
@@ -108,8 +108,8 @@ return {
           ['<C-y>'] = cmp.mapping.confirm({ select = true }),
           ['<C-Space>'] = cmp.mapping.complete(),
         })
-      }
-      end
+      })
+    end
     },
   {
     'L3MON4D3/LuaSnip',
