@@ -93,8 +93,24 @@ return {
   },
   {
     'hrsh7th/nvim-cmp',
-    lazy = false
-  },
+    lazy = false,
+    config = function()
+      local cmp = require('cmp')
+      return {
+        sources = {
+          {name = 'path'},
+          {name = 'nvim_lsp'},
+          {name = 'nvim_lua'},
+        },
+        mapping = cmp.mapping.preset.insert({
+          ['<C-p>'] = cmp.mapping.select_prev_item(),
+          ['<C-n>'] = cmp.mapping.select_next_item(),
+          ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+          ['<C-Space>'] = cmp.mapping.complete(),
+        })
+      }
+      end
+    },
   {
     'L3MON4D3/LuaSnip',
     lazy = false
