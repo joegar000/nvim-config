@@ -10,22 +10,20 @@ return {
     branch = 'v3.x',
     lazy = false,
     keys = {
-      { "gd", function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end, desc = "Goto Definition" },
-      { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
-      { "gI", function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end, desc = "Goto Implementation" },
-      { "gy", function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end, desc = "Goto T[y]pe Definition" },
+      { '<leader>gd', function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end, desc = "Goto Definition" },
+      { '<leader>gD', vim.lsp.buf.declaration, desc = "Goto Declaration" },
+      { '<leader>gI', function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end, desc = "Goto Implementation" },
+      { '<leader>gy', function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end, desc = "Goto T[y]pe Definition" },
       { 'K', vim.lsp.buf.hover, desc = 'Hover' },
       { 'gK', vim.lsp.buf.signature_help, desc = 'Signature help' },
       { '<C-k>', vim.lsp.buf.signature_help, desc = 'Signature help', mode = 'i' },
       { '<leader>vws', vim.lsp.buf.workspace_symbol, desc = 'Workspace symbols' },
       -- { '<leader>vd', vim.definition.open_float, desc = 'Open float' },
+      { '<leader>vca', vim.lsp.buf.code_action, desc = 'Code action' },
+      { '<leader>vrr', vim.lsp.buf.references, desc = 'References' },
+      { '<leader>vrn', vim.lsp.buf.rename, desc = 'Rename' },
       { ']d', vim.diagnostic.goto_next, desc = 'Go to next diagnostic' },
       { '[d', vim.diagnostic.goto_prev, desc = 'Go to previous diagnostic' },
-      { '<leader>ca', vim.lsp.buf.code_action, desc = 'Code action' },
-      { '<leader>gr', vim.lsp.buf.references, desc = 'References' },
-      { '<leader>cr', vim.lsp.buf.rename, desc = 'Rename' },
-      { 'gI', function() require('telescope.builtin').lsp_implementations({ reuse_win = true }) end, desc = 'Goto Implementation' },
-      { 'gy', function() require('telescope.builtin').lsp_type_definitions({ reuse_win = true }) end, desc = 'Goto T[y]pe Definition' },
       {
         "<leader>cA",
         function()
@@ -46,6 +44,7 @@ return {
     config = function()
       require('neodev').setup() -- Load neodev before any other lsp plugins
       local lsp_zero = require('lsp-zero')
+      lsp_zero.setup()
       lsp_zero.extend_lspconfig()
     end,
     init = function()
