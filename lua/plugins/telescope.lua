@@ -7,5 +7,6 @@ return {
         { '<leader>gf', '<cmd>Telescope git_files<CR>', desc = 'Git files' },
         { '<leader>lg', '<cmd>Telescope live_grep<CR>', desc = 'Live grep' }
     },
+    cmd = 'Telescope',
     config = true
 }
