@@ -20,7 +20,7 @@ return {
       { '<leader>vws', vim.lsp.buf.workspace_symbol, desc = 'Workspace symbols' },
       -- { '<leader>vd', vim.definition.open_float, desc = 'Open float' },
       { '<leader>vca', vim.lsp.buf.code_action, desc = 'Code action' },
-      { '<leader>vrr', vim.lsp.buf.references, desc = 'References' },
+      { '<leader>vrr', function() require("telescope.builtin").lsp_references({ reuse_win = true }) end, desc = 'References' },
       { '<leader>vrn', vim.lsp.buf.rename, desc = 'Rename' },
       { ']d', vim.diagnostic.goto_next, desc = 'Go to next diagnostic' },
       { '[d', vim.diagnostic.goto_prev, desc = 'Go to previous diagnostic' },
