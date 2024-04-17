@@ -2,10 +2,14 @@ vim.g.NERDCreateDefaultMappings = 0
 return {
     'preservim/nerdcommenter',
     keys = {
-        { '<leader>ncc', function() vim.cmd.call('<Plug>NERDCommenterComment("'..vim.cmd.mode()..'", "Comment")') end, mode = { 'n', 'x' }, desc = 'Comment' },
-        { '<leader>ncn', function() vim.cmd.call('nerdcommenter#Comment("", "Nested")') end, mode = { 'n', 'x' }, desc = 'Comment with forced nesting' },
-        { '<leader>nc<Space>', function() vim.cmd.call('nerdcommenter#Comment("", "Toggle")') end, mode = { 'n', 'x' }, desc = 'Toggle comments' },
-        { '<leader>ncm', function() vim.cmd.call('nerdcommenter#Comment("", "Minimal")') end, mode = { 'n', 'x' }, desc = 'Comments the given lines using one set of delimiters' },
+        { '<leader>ncc', '<Plug>NERDCommenterComment("n", "Comment")', mode = 'n', desc = 'Comment' },
+        { '<leader>ncc', '<Plug>NERDCommenterComment("x", "Comment")', mode = 'x', desc = 'Comment' },
+        { '<leader>ncn', '<Plug>NERDCommenterNested("n", "Nested")', mode = 'n', desc = 'Comment with forced nesting' },
+        { '<leader>ncn', '<Plug>NERDCommenterNested("x", "Nested")', mode = 'x', desc = 'Comment with forced nesting' },
+        { '<leader>nc<Space>', '<Plug>NERDCommenterToggle("n", "Toggle")', mode = 'n', desc = 'Toggle comments' },
+        { '<leader>nc<Space>', '<Plug>NERDCommenterToggle("x", "Toggle")', mode = 'x', desc = 'Toggle comments' },
+        { '<leader>ncm', '<Plug>NERDCommenterMinimal("n", "Minimal")', mode = 'n', desc = 'Comments the given lines using one set of delimiters' },
+        { '<leader>ncm', '<Plug>NERDCommenterMinimal("x", "Minimal")', mode = 'x', desc = 'Comments the given lines using one set of delimiters' },
         { '<leader>nci', function() vim.cmd.call('nerdcommenter#Comment("", "Invert")') end, mode = { 'n', 'x' }, desc = 'Toggle line comment states individually' },
         { '<leader>ncs', function() vim.cmd.call('nerdcommenter#Comment("", "Sexy")') end, mode = { 'n', 'x' }, desc = 'Comment with a pretty block layout' },
         { '<leader>ncy', function() vim.cmd.call('nerdcommenter#Comment("", "Yank")') end, mode = { 'n', 'x' }, desc = 'Yank then comment' },
