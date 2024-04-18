@@ -1,7 +1,7 @@
 return {
-    'karb94/neoscroll.nvim',
+    'echasnovski/mini.animate',
     config = function()
-        require('neoscroll').setup()
+        require('mini.animate').setup()
     end,
     enabled = function()
         return not InNeovide
