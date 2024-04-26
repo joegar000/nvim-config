@@ -3,7 +3,7 @@ return {
   lazy = false,
   keys = {
     {
-      '<leader>up',
+      '<leader>ap',
       function()
         local notify = require('notify').notify
         if vim.b.autopairs_enabled == 1 then
