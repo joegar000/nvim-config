@@ -45,4 +45,15 @@ return {
       end,
     })
   end,
+  dependencies = {
+    {
+      'folke/which-key.nvim',
+      optional = true,
+      opts = {
+        defaults = {
+          ['<leader>b'] = { name = '+buffer' }
+        }
+      }
+    }
+  }
 }

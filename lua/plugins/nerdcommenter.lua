@@ -37,5 +37,16 @@ return {
 
         { '<leader>zu', '<Plug>NERDCommenterUncomment("n", "Uncomment")', mode = 'n', desc = 'Uncomment' },
         { '<leader>zu', '<Plug>NERDCommenterUncomment("x", "Uncomment")', mode = 'x', desc = 'Uncomment' }
+    },
+    dependencies = {
+        {
+            'folke/which-key.nvim',
+            optional = true,
+            opts = {
+                defaults = {
+                    ['<leader>z'] = { name = '+comment' }
+                }
+            }
+        }
     }
 }

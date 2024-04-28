@@ -47,7 +47,19 @@ return {
     init = function()
       vim.g.lsp_zero_extend_cmp = 0
       vim.g.lsp_zero_extend_lspconfig = 0
-    end
+    end,
+    dependencies = {
+      {
+        'folke/which-key.nvim',
+        optional = true,
+        opts = {
+          defaults = {
+            ['<leader>c'] = { name = '+code' },
+            ['g'] = { name = '+goto' }
+          }
+        }
+      }
+    }
   },
   {
     'williamboman/mason.nvim',
@@ -61,7 +73,9 @@ return {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
-      {'L3MON4D3/LuaSnip'},
+      {
+        'L3MON4D3/LuaSnip'
+      }
     },
     config = function()
       local lsp = require('lsp-zero')
