@@ -14,29 +14,29 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Preserves paste when pasting over selected text
-vim.keymap.set("x", "<leader>p", "\"_dP")
+--vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- Paste from system clipboard
-vim.keymap.set("n", "<leader>p", "\"+p")
-vim.keymap.set("n", "<leader>P", "\"+P")
+--vim.keymap.set("n", "<leader>p", "\"+p")
+--vim.keymap.set("n", "<leader>P", "\"+P")
 
 -- Allows <leader>y and <leader>Y to copy into system clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+--vim.keymap.set("n", "<leader>y", "\"+y")
+--vim.keymap.set("v", "<leader>y", "\"+y")
+--vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- To delete into the void register
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+--vim.keymap.set("n", "<leader>d", "\"_d")
+--vim.keymap.set("v", "<leader>d", "\"_d")
 
 -- Don't know why, but primeagen doesn't like capital q
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Replaces everywhere in the file
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+--vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Looks like this formats the file
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+--vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- Use ctrl-[hjkl] to select the active split
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
