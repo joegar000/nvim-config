@@ -22,3 +22,7 @@ vim.keymap.set('n', '<leader>l', ':Lazy<CR>')
 require("config")
 require("lazy").setup("plugins")
 
+local wk = require("which-key")
+local maps = require("config.remap")
+wk.register(maps)
+
