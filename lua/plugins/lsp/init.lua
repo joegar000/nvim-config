@@ -36,13 +36,13 @@ local lspconfig = {
       { "<leader>cC", vim.lsp.codelens.refresh, desc = "Refresh & Display Codelens", mode = { "n" } }
     },
     dependencies = {
-      'hrsh7th/nvim-cmp',
-      'L3MON4D3/LuaSnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'saadparwaiz1/cmp_luasnip',
-      'rafamadriz/friendly-snippets',
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
+      { 'hrsh7th/nvim-cmp' },
+      { 'L3MON4D3/LuaSnip' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'rafamadriz/friendly-snippets' },
+      { 'williamboman/mason.nvim' },
+      { 'folke/neodev.nvim' },
       {
         'folke/which-key.nvim',
         optional = true,
@@ -55,6 +55,7 @@ local lspconfig = {
       }
     },
     config = function()
+      require('neodev').setup()
       local lsp = require('lspconfig')
       local lsp_defaults = lsp.util.default_config
       lsp_defaults.capabilties = vim.tbl_deep_extend(
@@ -66,14 +67,8 @@ local lspconfig = {
       lsp.lua_ls.setup({
         settings = {
           Lua = {
-            diagnostics = {
-              globals = { "vim" }
-            },
-            workspace = {
-              library = {
-                [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-                [vim.fn.stdpath "config" .. "/lua"] = true
-              }
+            completion = {
+              callSnippet = "Replace"
             }
           }
         }
@@ -81,17 +76,17 @@ local lspconfig = {
 
       require('mason').setup()
       require('mason-lspconfig').setup({
-        ensure_installed = { "lua_ls" },
+        ensure_installed = { 'lua_ls' },
+        handlers = {
+          -- this first function is the "default handler"
+          -- it applies to every language server without a "custom handler"
+          function(server_name)
+            require('lspconfig')[server_name].setup({})
+          end
+        }
       })
     end
-  },
-  {
-    "folke/neodev.nvim",
-    lazy = false,
-    config = function()
-      require('neodev').setup()
-    end
-  },
+  }
 }
 
 local completions = require('plugins.lsp.completions')
