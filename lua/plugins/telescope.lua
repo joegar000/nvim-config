@@ -23,6 +23,20 @@ return {
         { '<leader>tn', '<cmd>Telescope notify<CR>', desc = 'Nofication history' }
     },
     cmd = 'Telescope',
-    config = true,
-
+    config = function ()
+        local actions = require('telescope.actions')
+        require('telescope').setup({
+            defaults = {
+                mappings = {
+                    i = {
+                        ['<C-c>'] = false,
+                        ['<esc>'] = actions.close
+                    },
+                    n = {
+                        ['<C-c>'] = actions.close
+                    }
+                }
+            }
+        })
+    end
 }
