@@ -57,31 +57,26 @@ local lspconfig = {
     config = function()
       require('neodev').setup()
       local lsp = require('lspconfig')
+      local default_capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lsp_defaults = lsp.util.default_config
       lsp_defaults.capabilties = vim.tbl_deep_extend(
         'force',
         lsp_defaults.capabilities,
-        require('cmp_nvim_lsp').default_capabilities()
+        default_capabilities
       )
-
-      lsp.lua_ls.setup({
-        settings = {
-          Lua = {
-            completion = {
-              callSnippet = "Replace"
-            }
-          }
-        }
-      })
 
       require('mason').setup()
       require('mason-lspconfig').setup({
-        ensure_installed = { 'lua_ls' },
+        ensure_installed = {
+          'lua_ls'
+        },
         handlers = {
           -- this first function is the "default handler"
           -- it applies to every language server without a "custom handler"
           function(server_name)
-            require('lspconfig')[server_name].setup({})
+            require('lspconfig')[server_name].setup({
+              capabilities = default_capabilities
+            })
           end
         }
       })
