@@ -68,7 +68,9 @@ local lspconfig = {
       require('mason').setup()
       require('mason-lspconfig').setup({
         ensure_installed = {
-          'lua_ls'
+          'lua_ls',
+          'basedpyright',
+          'tsserver'
         },
         handlers = {
           -- this first function is the "default handler"
@@ -78,6 +80,15 @@ local lspconfig = {
               capabilities = default_capabilities
             })
           end
+        }
+      })
+
+      lsp['basedpyright'].setup({
+        capabilities = default_capabilities,
+        settings = {
+          basedpyright = {
+            typeCheckingMode = 'standard'
+          }
         }
       })
     end
