@@ -97,4 +97,4 @@ local lspconfig = {
 
 local completions = require('plugins.lsp.completions')
 local mason = require('plugins.lsp.mason')
-return { unpack(lspconfig), completions, mason }
+return { unpack(lspconfig), completions, unpack(mason) }
