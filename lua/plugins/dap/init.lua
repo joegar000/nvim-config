@@ -83,4 +83,5 @@ local dap = {
 }
 
 local dapPython = require('plugins.dap.nvim-dap-python')
-return { dap, dapPython }
+local jester = require('plugins.dap.jester')
+return { dap, dapPython, jester }
