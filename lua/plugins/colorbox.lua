@@ -20,10 +20,9 @@ return {
                     lua = "nightfox",
                     markdown = "tokyonight",
                     python = "melange",
-                    php = "embark"
-                },
-                empty = "tokyonight",
-                fallback = "tokyonight",
+                    php = "embark",
+                    dashboard = "tokyonight",
+                }
             },
         })
     end,
