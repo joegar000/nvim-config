@@ -47,12 +47,6 @@ local dap = {
         },
       },
     },
-
-    {
-      "jay-babu/mason-nvim-dap.nvim",
-      dependencies = "mason.nvim",
-      cmd = { "DapInstall", "DapUninstall" }
-    },
   },
 
   keys = {
@@ -84,4 +78,4 @@ local dap = {
 
 local dapPython = require('plugins.dap.nvim-dap-python')
 local jester = require('plugins.dap.jester')
-return { dap, dapPython, jester }
+return { dap, unpack(dapPython), jester }
