@@ -1,11 +1,11 @@
+local WIDTH_RATIO = 0.8
+local HEIGHT_RATIO = 0.8
 return {
     'nvim-tree/nvim-tree.lua',
     keys = { { '<leader>e', '<cmd>NvimTreeFindFileToggle<CR>', desc = 'Open file explorer' } },
     lazy = false,
     config = function()
         local _setup, nvimtree = pcall(require, "nvim-tree")
-        local WIDTH_RATIO = 0.8
-        local HEIGHT_RATIO = 0.8
 
         nvimtree.setup({
             disable_netrw = true,
@@ -13,7 +13,19 @@ return {
             respect_buf_cwd = true,
             sync_root_with_cwd = true,
             view = {
-                -- relativenumber = true,
+                relativenumber = true,
+                -- float = {
+                --     enable = true,
+                --     quit_on_focus_loss = true,
+                --     open_win_config = {
+                --         border = "rounded",
+                --         relative = "cursor",
+                --         row = 0,
+                --         col = 0,
+                --         width = 40,
+                --         height = 30,
+                --     }
+                -- },
                 float = {
                     enable = true,
                     open_win_config = function()
@@ -27,7 +39,7 @@ return {
                         local center_y = ((vim.opt.lines:get() - window_h) / 2) - vim.opt.cmdheight:get()
 
                         return {
-                            border = "none",
+                            border = "rounded",
                             relative = "editor",
                             row = center_y,
                             col = center_x,
@@ -48,6 +60,16 @@ return {
                 timeout = 2000,
                 cygwin_support = false,
             },
+            actions = {
+                open_file = {
+                    quit_on_open = false,
+                    eject = true,
+                    resize_window = true,
+                    window_picker = {
+                        enable = false
+                    },
+                },
+            }
         })
     end
 }

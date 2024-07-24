@@ -2,7 +2,6 @@ return {
     'linrongbin16/colorbox.nvim',
     lazy = false,
     priority = 3000,
-    background = "dark",
     filter = false,
     build = function()
         require("colorbox").update()
@@ -10,6 +9,7 @@ return {
     config = function()
         require("colorbox").setup({
             timing = "filetype",
+            fallback = "tokyonight",
             policy = {
                 mapping = {
                     javascript = "vscode",
@@ -17,8 +17,8 @@ return {
                     javascriptreact = "vscode",
                     typescriptreact = "vscode",
                     json = "vscode",
-                    lua = "nightfox",
-                    markdown = "tokyonight",
+                    lua = "catppuccin",
+                    markdown = "nord",
                     python = "melange",
                     php = "embark",
                     dashboard = "tokyonight",

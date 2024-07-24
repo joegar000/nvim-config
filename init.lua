@@ -14,6 +14,11 @@ vim.opt.rtp:prepend(lazypath)
 IsWindows = package.config:sub(1,1) == '\\'
 InNeovide = vim.g.neovide
 
+if not IsWindows then
+  vim.g.neovide_transparency = 0.9
+  vim.g.neovide_window_blurred = true
+end
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
