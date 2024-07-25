@@ -75,7 +75,7 @@ return {
         -- Immediately open file after creation
         local api = require('nvim-tree.api')
         api.events.subscribe(api.events.Event.FileCreated, function(file)
-            vim.cmd('edit ' .. file.name)
+            vim.cmd('edit ' .. file.fname)
         end)
     end
 }
