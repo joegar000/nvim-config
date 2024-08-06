@@ -64,14 +64,16 @@ return {
         {
           "linux-cultist/venv-selector.nvim",
           dependencies = {
-            "neovim/nvim-lspconfig", 
+            "neovim/nvim-lspconfig",
             "mfussenegger/nvim-dap", "mfussenegger/nvim-dap-python", --optional
             { "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
           },
           lazy = false,
           branch = "regexp", -- This is the regexp branch, use this for the new version
           config = function()
-            require("venv-selector").setup()
+            require('venv-selector').setup({
+              pipenv_path = IsWindows and '~\\.virtualenvs\\' or '~/.local/share/virtualenvs/'
+            })
           end,
           keys = {
             -- Keymap to open VenvSelector to pick a venv.
@@ -259,10 +261,11 @@ return {
     end
     
     require('dap-python').test_runner = 'pytest'
-    require('dap-python').setup()
+    require('dap-python').setup("python")
 
     require('mason-nvim-dap').setup({
         ensure_installed = {'stylua', 'jq'},
+        automatic_installation = true,
         handlers = {
             function(config)
               -- all sources with no handler get passed here

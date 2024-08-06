@@ -10,6 +10,7 @@ return {
         require("colorbox").setup({
             timing = "filetype",
             fallback = "tokyonight",
+            empty = "tokyonight",
             policy = {
                 mapping = {
                     javascript = "vscode",
