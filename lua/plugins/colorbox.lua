@@ -17,9 +17,10 @@ return {
                     typescript = "vscode",
                     javascriptreact = "vscode",
                     typescriptreact = "vscode",
+                    html = "vscode", -- Doesn't work?
                     json = "vscode",
                     lua = "catppuccin",
-                    markdown = "nord",
+                    markdown = "tokyonight",
                     python = "melange",
                     php = "embark",
                     dashboard = "tokyonight",
