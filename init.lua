@@ -25,5 +25,12 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set('n', '<leader>l', ':Lazy<CR>')
 
 require("config")
-require("lazy").setup("plugins")
+require("lazy").setup({
+  spec = {
+    import = "plugins"
+  },
+  ui = {
+    border = "rounded"
+  }
+})
 
