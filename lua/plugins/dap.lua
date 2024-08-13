@@ -259,9 +259,13 @@ return {
         },
       }
     end
-    
+
     require('dap-python').test_runner = 'pytest'
-    require('dap-python').setup("python")
+    local slash = IsWindows and '\\' or '/'
+    require('dap-python').setup(vim.fn.stdpath('data') .. ('/mason/packages/debugpy/venv/bin/python'):gsub('/', slash):gsub('bin', IsWindows and 'Scripts' or 'bin'))
+    require('dap-python').resolve_python = function()
+      return io.popen('pipenv --venv'):read("*a")
+    end
 
     require('mason-nvim-dap').setup({
         ensure_installed = {'stylua', 'jq'},
@@ -273,17 +277,17 @@ return {
               -- Keep original functionality
               require('mason-nvim-dap').default_setup(config)
             end,
-            python = function(config)
-                config.adapters = {
-                 type = "executable",
-                  command = "/usr/bin/python3",
-                  args = {
-                    "-m",
-                    "debugpy.adapter",
-                  },
-                }
-                require('mason-nvim-dap').default_setup(config) -- don't forget this!
-            end,
+            -- python = function(config)
+            --     config.adapters = {
+            --      type = "executable",
+            --       command = "/usr/bin/python3",
+            --       args = {
+            --         "-m",
+            --         "debugpy.adapter",
+            --       },
+            --     }
+            --     require('mason-nvim-dap').default_setup(config) -- don't forget this!
+            -- end,
         },
     })
 
