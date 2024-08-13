@@ -135,6 +135,7 @@ return {
       end,
       desc = 'Run with Args',
     },
+    { '<leader>jq', '<cmd>%!jq<CR>', desc = 'Format JSON' }
   },
   config = function()
     local dap = require('dap')

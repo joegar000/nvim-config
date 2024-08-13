@@ -2,8 +2,7 @@ return {
   {
     'williamboman/mason.nvim',
     keys = {
-      { '<leader>m', '<cmd>Mason<CR>', desc = 'Open Mason' },
-      { '<leader>jq', '<cmd>%!jq<CR>', desc = 'Format JSON' }
+      { '<leader>m', '<cmd>Mason<CR>', desc = 'Open Mason' }
     },
     config = function()
       require('mason').setup({
