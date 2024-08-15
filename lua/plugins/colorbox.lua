@@ -17,7 +17,8 @@ return {
                     typescript = "vscode",
                     javascriptreact = "vscode",
                     typescriptreact = "vscode",
-                    html = "vscode", -- Doesn't work?
+                    html = "vscode",
+                    htmldjango = "vscode",
                     json = "vscode",
                     lua = "catppuccin",
                     markdown = "catppuccin",
