@@ -4,7 +4,8 @@ vim.opt.list = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.ignorecase = true
+-- Whether to ignore case when searching with / or ?
+-- vim.opt.ignorecase = true
 
 -- Determines how many spaces a tab is
 vim.opt.softtabstop = 4
@@ -28,6 +29,8 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
 vim.opt.colorcolumn = "120"
+
+vim.opt.fillchars = { eob = " " }
 
 if InNeovide and IsWindows then
   vim.g.neovide_scale_factor = 0.85

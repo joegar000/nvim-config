@@ -10,7 +10,7 @@ return {
         require("colorbox").setup({
             timing = "filetype",
             fallback = "tokyonight",
-            empty = "tokyonight",
+            empty = "catppuccin",
             policy = {
                 mapping = {
                     javascript = "vscode",
@@ -20,12 +20,16 @@ return {
                     html = "vscode", -- Doesn't work?
                     json = "vscode",
                     lua = "catppuccin",
-                    markdown = "tokyonight",
-                    python = "melange",
+                    markdown = "catppuccin",
+                    python = "everforest",
+                    sql = "kanagawa",
                     php = "embark",
-                    dashboard = "tokyonight",
+                    dashboard = "catppuccin",
                 }
             },
+            -- post_hook = function(color, spec)
+            --     print(color)
+            -- end
         })
     end,
 }
