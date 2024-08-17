@@ -1,5 +1,8 @@
 return {
     'linrongbin16/colorbox.nvim',
+    dependencies = {
+        { "catppuccin/nvim", name = "catppuccin" }
+    },
     lazy = false,
     priority = 3000,
     filter = false,
@@ -9,7 +12,7 @@ return {
     config = function()
         require("colorbox").setup({
             timing = "filetype",
-            fallback = "tokyonight",
+            fallback = "catppuccin",
             empty = "catppuccin",
             policy = {
                 mapping = {

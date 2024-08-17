@@ -24,6 +24,10 @@ vim.g.maplocalleader = "\\"
 
 vim.keymap.set('n', '<leader>l', ':Lazy<CR>')
 
+function toSeconds(minutes)
+  return minutes * 60
+end
+
 require("config")
 require("lazy").setup({
   spec = {
@@ -31,6 +35,12 @@ require("lazy").setup({
   },
   ui = {
     border = "rounded"
+  },
+  install = {
+    colorscheme = { "catppuccin" }
+  },
+  git = {
+    timeout = toSeconds(15)
   }
 })
 
