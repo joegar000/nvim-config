@@ -61,11 +61,7 @@ return {
         settings = {
           pylsp = {
             configurationSources = { 'flake8' },
-            flake8 = {
-              enabled = true,
-              -- Figure out how to configure max line length cause this ain't it
-              -- maxLineLength = 127
-            },
+            flake8 = { enabled = true },
             pycodestyle = { enabled = false },
             mccabe = { enabled = false },
             pyflakes = { enabled = false },
