@@ -136,8 +136,7 @@ return {
         require('dap').continue({before = get_args})
       end,
       desc = 'Run with Args',
-    },
-    { '<leader>jq', '<cmd>%!jq<CR>', desc = 'Format JSON' }
+    }
   },
   config = function()
     local dap = require('dap')
@@ -271,7 +270,6 @@ return {
     end
 
     require('mason-nvim-dap').setup({
-        ensure_installed = {'stylua', 'jq'},
         automatic_installation = true,
         handlers = {
             function(config)
