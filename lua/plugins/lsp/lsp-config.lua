@@ -33,6 +33,7 @@ return {
         ensure_installed = {
           'lua_ls',
           'basedpyright',
+          'pylsp',
           'tsserver'
         },
         handlers = {
@@ -51,6 +52,23 @@ return {
         settings = {
           basedpyright = {
             typeCheckingMode = 'standard'
+          }
+        }
+      })
+
+      lspconfig['pylsp'].setup({
+        capabilities = capabilities,
+        settings = {
+          pylsp = {
+            configurationSources = { 'flake8' },
+            flake8 = {
+              enabled = true,
+              -- Figure out how to configure max line length cause this ain't it
+              -- maxLineLength = 127
+            },
+            pycodestyle = { enabled = false },
+            mccabe = { enabled = false },
+            pyflakes = { enabled = false },
           }
         }
       })
