@@ -1,6 +1,6 @@
 local formatters_by_ft = {
   lua = { "stylua" },
-  python = { "autopep8" },
+  python = { "autopep8", "autoflake" },
   cpp = { "clang_format" },
   c = { "clang_format" },
   go = { "gofumpt" },
