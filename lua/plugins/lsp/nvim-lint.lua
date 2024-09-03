@@ -22,7 +22,7 @@ return {
         "eslint"
       },
       htmldjango = {
-        "jinja-lsp"
+        "djlint", "jinja-lsp"
       }
     }
 
