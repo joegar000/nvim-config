@@ -20,7 +20,17 @@ return {
         { '<leader>tg', '<cmd>Telescope git_files<CR>', desc = 'Git files' },
         { '<leader>tlg', '<cmd>Telescope live_grep<CR>', desc = 'Live grep' },
         { '<leader>tk', '<cmd>Telescope keymaps<CR>', desc = 'Keymaps' },
-        { '<leader>tn', '<cmd>Telescope notify<CR>', desc = 'Nofication history' }
+        { '<leader>tn', '<cmd>Telescope notify<CR>', desc = 'Nofication history' },
+        {
+            '<leader>tt',
+            function ()
+                require('telescope.builtin').find_files({
+                    cwd = './__notes__/',
+                    prompt_title = "Project Notes"
+                })
+            end,
+            desc = 'Open notes'
+        }
     },
     cmd = 'Telescope',
     config = function ()
